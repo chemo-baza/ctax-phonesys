@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IC Callcenter</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <base href="https://ctax.intelligentcontacts.net" />
+
+    <meta name="format-detection" content="telephone=no" />
+
+    <link href="/images/favicon/icon-32.png" sizes="32x32" rel="icon" />
+    <link href="/images/favicon/icon-192.png" sizes="192x192" rel="icon" />
+    <link href="/images/favicon/icon-180.png" rel="apple-touch-icon-precomposed" />
+    <meta content="/images/favicon/icon-270.png" name="msapplication-TileImage" />
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-3.0.1.js"></script>
+
+    <link type="text/css" href="/js/jquery-ui-1.12.1.redmond_theme/jquery-ui.min.css" rel="stylesheet" />
+    <link type="text/css" href="/js/jquery-ui-1.12.1.redmond_theme/jquery-ui.theme.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery-ui-1.12.1.redmond_theme/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/js/datatables/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="/js/datatables/datatables.custom.css" />
+    <script type="text/javascript" src="/js/datatables/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.maskedinput.min.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+    <link type="text/css" href="/js/icheck/skins/minimal/blue.css" rel="stylesheet" />
+    <link type="text/css" href="/js/icheck/skins/line/yellow.css" rel="stylesheet" />
+    <link type="text/css" href="/js/icheck/skins/square/blue.css" rel="stylesheet" />
+    <link type="text/css" href="/js/icheck/skins/minimal/minimal.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/icheck/jquery.icheck.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+
+    <link type="text/css" href="/js/paginator/jquery.paginator.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/paginator/jquery.paginator.js"></script>
+
+    <script type="text/javascript" src="/js/jmp3/jmp3.js"></script>
+    <script type="text/javascript" src="/js/jplayer/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="/js/jrecorder/jRecorder.js"></script>
+
+    <link type="text/css" href="/js/qtip/jquery.qtip.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/qtip/jquery.qtip.js"></script>
+
+    <script type="text/javascript" src="/js/colorpicker/jquery.colorpicker.js"></script>
+    <link type="text/css" href="/js/colorpicker/jquery.colorpicker.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/timepicker/jquery.timepicker.js"></script>
+    <link type="text/css" href="/js/timepicker/jquery.timepicker.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/datetime_picker/jquery.simple-dtpicker.js"></script>
+    <link type="text/css" href="/js/datetime_picker/jquery.simple-dtpicker.css" rel="stylesheet" />
+
+    <link type="text/css" href="/js/toastr/toastr.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/toastr/toastr.js"></script>
+
+    <link type="text/css" href="/css/style.css?1563937183" rel="stylesheet" />
+    <link type="text/css" href="/css/right_panel.css?1563937183" rel="stylesheet" />
+    <link type="text/css" href="/css/phone.css?1563937183" rel="stylesheet" />
+
+    <script type="text/javascript" src="/js/chosen/chosen.jquery.min.js?time"></script>
+    <link type="text/css" href="/js/chosen/chosen.min.css?time" rel="stylesheet" />
+    <link type="text/css" href="/js/chosen/custom-chosen.min.css?time" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/js/datatables/fixedHeader.dataTables.min.css">
+    <script type="text/javascript" src="/js/datatables/dataTables.fixedHeader.min.js"></script>
+
+    <script type="text/javascript" src="/js/easytimer/easytimer.min.js"></script>
+
+    <script type="text/javascript" src="/js/Updater.js?1563937183"></script>
+    <script type="text/javascript" src="/js/right_panel.js?1563937183"></script>
+    <script type="text/javascript" src="/js/ajaxfileupload.js?1563937183"></script>
+    <script>
+        voicemail_device_id = 307;
+    </script>
+    <script type="text/javascript" src="/js/right_panel_voicemail.js?1563937183"></script>
+    <script type="text/javascript" src="/js/right_panel_missed_calls.js?1563937183"></script>
+
+    <script type="text/javascript" src="/js/inputmask/jquery.inputmask.bundle.min.js"></script>
+    <!-- Inputmask -->
+
+    <link type="text/css" href="/js/tag-it/css/jquery.tagit.css" rel="stylesheet" />
+    <!-- Tag-it -->
+    <script type="text/javascript" src="/js/tag-it/tag-it.min.js"></script>
+
+    <link rel="stylesheet" href="js/font-awesome/css/fontawesome-all.css">
+</head>
+
+<body>
+    <div id="intelligentcontacts-container" class="container ">
+        <script>
+            $('body').toggleClass('hide-menu');
+        </script>
+
+        <div class="content">
+            <style>
+            .chosen-results ::-webkit-scrollbar {
+                width: 20px;
+            }
+
+            nobr img {
+                vertical-align: -4px;
+                margin-right: 6px;
+            }
+
+            div .time {
+                display: block ! important;
+                color: black;
+            }
+
+            #help_table {
+                font-size: 12px !important;
+            }
+
+            #page_help td {
+                vertical-align: middle;
+            }
+
+            .icheckbox_square-blue {
+                float: left;
+            }
+
+            .call-details-link {
+                color: #444;
+            }
+
+            .call-details-link:hover,
+            .call-details-link:focus {
+                color: #2489c5;
+            }
+
+            /* This is for dataTables "Loading. Please wait..." message to be seen */
+
+            div.dataTables_processing {
+                z-index: 3;
+            }
+
+            .poolname_href {
+                margin-left: 20px;
+                color: transparent;
+            }
+
+            .pool_img {
+                position: absolute;
+            }
+
+            span.link_decoration {
+                text-decoration: none;
+                color: #444;
+                font-size: 13px;
+            }
+
+            span.link_decoration:hover,
+            span.link_decoration:focus {
+                text-decoration: underline;
+                color: #2489c5;
+            }
+
+            .content {
+                padding: 0 !important;
+                overflow-x: hidden;
+            }
+
+            #header-div {
+                padding: 15px;
+                min-height: 100vh !important;
+                overflow-x: auto;
+                margin-left: 60px;
+            }
+
+            #calls_wrapper {
+                margin-top: 0;
+            }
+
+            .filters-body-div {
+                display: block;
+                overflow: auto;
+                max-height: 93vh;
+                min-height: 93vh;
+            }
+
+            .fixedHeader-floating {
+                display: block;
+            }
+
+            #calls td {
+                vertical-align: middle;
+            }
+
+            .download-link {
+                color: transparent;
+            }
+
+            .total_time span {
+                padding-right: 10px;
+            }
+
+            #report-header {
+                min-width: 100%;
+            }
+
+            #filters-used-number {
+                display: none;
+            }
+
+            #filter-sidebar {
+                position: absolute;
+            }
+
+            #calls_wrapper #calls_processing {
+                padding-top: 100px;
+                height: 96%;
+                top: 65px;
+                background-color: #ffffffc9 ! important;
+            }
+
+            .clone_title {
+                width: max-content;
+                font-size: 23px !important;
+                font-weight: 900;
+                line-height: 29px;
+            }
+
+            #save_as_form .label_check {
+                margin-top: 0px;
+            }
+
+            #filters-container p {
+                font-size: 12px;
+            }
+        </style>
+
+        <div>
+            <div id="fixthead"></div>
+
+            <div id="filter-sidebar">
+
+                <!--Collapse arrow-->
+
+                <span id="collapse-arrow"></span>
+
+                <!--Filter Items-->
+                <div id="filter-icons">
+                    <ul id="filter-icons-list" class="narrow">
+                        <li class="filter-icons-container">
+                            <div class="img-container" data-tab="filters-body">
+                                <img src="images/Filters.svg" alt="Filters">
+                            </div>
+
+                            <span class="filter-list-item-label">Filters</span>
+                            <!--Number of used filters-->
+                            <span class="used-filters" id="filters-used-number">1</span>
+                        </li>
+                        <li class="filter-icons-container">
+                            <div class="img-container" data-tab="columns-body">
+                                <img src="images/Columns.svg" alt="Columns">
+                            </div>
+                            <span class="filter-list-item-label">Columns</span>
+                        </li>
+                        <li class="filter-icons-container">
+                            <div class="img-container" data-tab="export-body">
+                                <img src="images/Export.svg" alt="Export">
+                            </div>
+                            <span class="filter-list-item-label">Export</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Filter body -->
+                <div class="filters-body-div">
+                    <div id="filters-container">
+                        <div id="filters-body" class="tabs">
+                            <form action="reports/calls/" method="POST" name="filter_form" id="filter_form">
+
+                                <div style="height: 50px; margin-bottom: 5px;">
+                                    <h4 style="float: left">Filter by:</h4>
+                                    <input style="float: right; margin: 15px 0;" type="submit" value="Update »" class="button" id="update">
+                                </div>
+
+                                <div style="clear: both"></div>
+
+                                <div class="date-fields">
+                                    <div class="f-left">
+                                        <label class="filter-label">Start date</label><br>
+                                        <input class="datepicker filter-input short" style="font-family: inherit;font-weight: inherit;font-size: 14px;" type="text" name="filter_start_date" id="filter_start_date" value="07/23/2019">
+                                    </div>
+
+                                    <div class="f-right">
+                                        <label class="filter-label">End date</label><br>
+                                        <input class="datepicker filter-input short" type="text" name="filter_end_date" id="filter_end_date" value="07/23/2019">
+                                    </div>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Phone</label><br>
+                                    <input class="filter-input filter_phone" id="phone_filter" type="text" name="filter_phone" value="">
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Account ID</label><br>
+                                    <input class="filter-input" id="account_id" type="text" name="filter_accountid" value="">
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Agent</label><br>
+
+                                    <select class="chosen chosen215" name="filter_agent[]" id="agent" data-placeholder="All agents" multiple>
+                                        <option value="inactive"    onclick="alert('a')">Inactive users</option>
+                                        <option value="active"        onclick="alert('b')">Active users</option>
+                                        <option value="456"   > Sandra Rodriguez </option>
+                                        <option value="712"   > Sebastian Cuadras </option>
+                                        <option value="488"  style="color:#ccc; text-decoration: line-through" > Unassigned User </option>
+                                        <option value="504"  style="color:#ccc; text-decoration: line-through" > Unassigned User </option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Contact list</label><br>
+
+                                    <select class="chosen chosen215" name="filter_pool[]" id="contact_list" data-placeholder="All contacts" multiple>
+                                        <option value="1" >Joel test</option>
+                                        <option value="3" >FreeReportDec27</option>
+                                        <option value="5" >FreeReportJan9</option>
+                                        <option value="9" >FreeReportJan28</option>
+                                        <option value="13" >FreeReportFeb6</option>
+                                        <option value="14" >FreeReportFeb7</option>
+                                        <option value="16" >FreeReportSpanishApril10</option>
+                                        <option value="17" >FreeReportMay25Eng</option>
+                                        <option value="18" >FreeReportJune3Eng</option>
+                                        <option value="19" >FreeReportJune13Eng</option>
+                                        <option value="20" >FreeReportJuly9Eng</option>
+                                        <option value="21" >FreeReportJuly9Eng2</option>
+                                        <option value="22" >FreeReportJuly11Eng</option>
+                                        <option value="23" >FreeReportJuly18Eng</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Call origin</label><br>
+
+                                    <select class="chosen chosen215" name="filter_call_origin" id="callorigin" data-placeholder="All calls">
+                                        <option value="all" >All calls</option>
+                                        <option value="internal" >Internal calls</option>
+                                        <option value="external" >External calls</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Call type</label><br>
+
+                                    <select class="chosen chosen215" name="filter_call_type[]" id="calltype" data-placeholder="All calls" multiple>
+                                        <option value="I" >Inbound</option>
+                                        <option value="M" >Manual</option>
+                                        <option value="O" >Outbound</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Termination event</label><br>
+
+                                    <select class="chosen chosen215" name="filter_termination_event[]" id="termination_event" data-placeholder="All termination events" multiple>
+                                        <option value="ABANDON" >Abandon </option>
+                                        <option value="COMPLETEAGENT" >Complete Agent </option>
+                                        <option value="COMPLETECALLER" >Complete Caller </option>
+                                        <option value="EXITWITHKEY" >Exit with Key </option>
+                                        <option value="EXITWITHTIMEOUT" >Exit with Timeout </option>
+                                        <option value="TRANSFER" >Transfer </option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Call result</label><br>
+
+                                    <select class="chosen chosen215" name="filter_crc[]" id="call_result" data-placeholder="All call results" multiple>
+                                        <option value="22" >
+                                            3QS - Three Question Screen Transfer
+                                        </option>
+                                        <option value="46" >
+                                            4QS-1 - Four Question Screen-Tier 1
+                                        </option>
+                                        <option value="47" >
+                                            4QS-2 - Four Question Screen-Tier 2
+                                        </option>
+                                        <option value="48" >
+                                            5QS-1 - Five Question Screen-Tier 1
+                                        </option>
+                                        <option value="49" >
+                                            5QS-2 - Five Question Screen-Tier 2
+                                        </option>
+                                        <option value="10" >
+                                            AMD - Answer Machine - No Message Left
+                                        </option>
+                                        <option value="15" >
+                                            AMM - Answer Machine - Message Left
+                                        </option>
+                                        <option value="43" >
+                                            AR Call - Account Receivable Call
+                                        </option>
+                                        <option value="50" >
+                                            BLG - Billing
+                                        </option>
+                                        <option value="9" >
+                                            BSY - Busy Signal
+                                        </option>
+                                        <option value="40" >
+                                            Call Completed - Call Handled Successfully
+                                        </option>
+                                        <option value="38" >
+                                            CDIS - Call Discarded
+                                        </option>
+                                        <option value="42" >
+                                            CR Call - Case Review Call
+                                        </option>
+                                        <option value="45" >
+                                            CUR - Current Client
+                                        </option>
+                                        <option value="29" >
+                                            DNC - Do Not Call
+                                        </option>
+                                        <option value="30" >
+                                            DNQ - Non Qualified
+                                        </option>
+                                        <option value="35" >
+                                            DRP - Dropped Call
+                                        </option>
+                                        <option value="8" >
+                                            FAX - Fax machine
+                                        </option>
+                                        <option value="2" >
+                                            HNG - Hangup or dead air
+                                        </option>
+                                        <option value="34" >
+                                            IRS - IRS Call
+                                        </option>
+                                        <option value="26" >
+                                            jctest - jctest
+                                        </option>
+                                        <option value="16" >
+                                            NOA - No Answer
+                                        </option>
+                                        <option value="7" >
+                                            OI - Invalid Phone Number
+                                        </option>
+                                        <option value="44" >
+                                            P1 Call - New Client Call
+                                        </option>
+                                        <option value="31" >
+                                            QLD - Qualified Prospect
+                                        </option>
+                                        <option value="32" >
+                                            QND - Qualified No Deal
+                                        </option>
+                                        <option value="36" >
+                                            RBD - Robodial
+                                        </option>
+                                        <option value="13" >
+                                            UNK - Contact CU to resolve this result code
+                                        </option>
+                                        <option value="37" >
+                                            VMAfter - Voice Mail After Hours
+                                        </option>
+                                        <option value="39" >
+                                            Wrong Number - Not Looking for CTAX
+                                        </option>
+                                        <option value="28" >
+                                            XAC - Transfer Accounting Sales
+                                        </option>
+                                        <option value="24" >
+                                            XAR - Transfer to AR
+                                        </option>
+                                        <option value="33" >
+                                            XCA - Transfer to Case Advocate
+                                        </option>
+                                        <option value="23" >
+                                            XCM - Transfer to CM
+                                        </option>
+                                        <option value="17" >
+                                            XFC - Transferred Call
+                                        </option>
+                                        <option value="27" >
+                                            XSE - Transfer to English Sales
+                                        </option>
+                                        <option value="25" >
+                                            XSS - Transfer Spanish Sales
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">Campaign</label><br>
+
+                                    <select class="chosen chosen215 " name="campaign[]" id="filter_campaign" data-placeholder="All campaigns" multiple>
+                                        <option value="546" > AR English</option>
+                                        <option value="545" > Case Management</option>
+                                        <option value="555" > CM English</option>
+                                        <option value="556" > CM Spanish</option>
+                                        <option value="672" > Current Year Tax Prep Eng</option>
+                                        <option value="704" > Current Year Tax Prep Span</option>
+                                        <option value="678" > Direct Dialed</option>
+                                        <option value="557" > Enrollment English</option>
+                                        <option value="727" > Enrollment English W/O Screeners</option>
+                                        <option value="558" > Enrollment Spanish</option>
+                                        <option value="655" > Free Report</option>
+                                        <option value="741" > Free Report Spanish</option>
+                                        <option value="725" > Hoefke Test</option>
+                                        <option value="584" > Inbound</option>
+                                        <option value="5" > Inbound</option>
+                                        <option value="728" > Internal Transfer</option>
+                                        <option value="735" > Internal Transfer.</option>
+                                        <option value="554" > IRS Line</option>
+                                        <option value="689" > Joel&#039;s test dialer</option>
+                                        <option value="585" > Manual</option>
+                                        <option value="568" > Outbound AR/Finance</option>
+                                        <option value="563" > Outbound CM</option>
+                                        <option value="561" > Outbound Enrollment</option>
+                                        <option value="637" > Outbound Enrollment (Sp)</option>
+                                        <option value="564" > Outbound Enterprise</option>
+                                        <option value="569" > Outbound Investigation</option>
+                                        <option value="570" > Outbound P3</option>
+                                        <option value="567" > Outbound Practitioner</option>
+                                        <option value="562" > Outbound Spanish Sales</option>
+                                        <option value="566" > Outbound Tax Advocate</option>
+                                        <option value="565" > Outbound Tax Prep</option>
+                                        <option value="698" > P3</option>
+                                        <option value="702" > P3 Spanish</option>
+                                        <option value="674" > Practitioner IRS</option>
+                                        <option value="652" > Preview Campaign</option>
+                                        <option value="782" > Sugar - Enrollment English</option>
+                                        <option value="783" > Sugar - Enrollment English W/O Screeners</option>
+                                        <option value="784" > Sugar - Enrollment Spanish</option>
+                                        <option value="746" > Sugar Enrollment Eng Testing</option>
+                                        <option value="654" > Test Team</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-input-container">
+                                    <label class="filter-label">DNIS</label><br>
+
+                                    <select class="chosen chosen215" name="filter_dnis[]" id="dnis" data-placeholder="All DNIS" multiple>
+                                        <option value="1005" >
+                                            1005
+
+                                            - 1005 Test Number
+                                        </option>
+                                        <option value="13123867741" >
+                                            312-386-7741
+
+                                            - ES: Drips
+                                        </option>
+                                        <option value="13124360570" >
+                                            312-436-0570
+
+                                        </select>
+                                    </div>
+
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">Call resulted in</label><br>
+
+                                        <select class="chosen chosen215" name="filter_call_resulted_in[]" id="call_resulted_in" data-placeholder="All calls resulted in" multiple>
+                                            <option value="0" >No contact </option>
+                                            <option value="1" >Contact </option>
+                                            <option value="2" >Contact → Presentation </option>
+                                            <option value="3" >Contact → Presentation → Success </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="filter-input-container" style="margin-top: 7px">
+                                        <div style="height: 30px;">
+                                            <input id="missed" type="checkbox" class="iCheck " name="missed" value="1">
+                                            <div class="label_check" for="missed" style="font-size: 13px;">Call was missed</div>
+                                        </div>
+
+                                        <div style="height: 40px">
+                                            <input id="Voicemail" type="checkbox" class="iCheck " name="check_voicemail" value="1">
+                                            <div class="label_check" for="Voicemail" style="font-size: 13px;">Voicemail left</div>
+                                        </div>
+                                    </div>
+
+                                    <h4 style="margin-bottom: 5px;">Call attributes</h4>
+
+
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">ExtName</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[10][]" data-attrid="10" multiple data-placeholder="-">
+                                            <option value="Joel Castile" >Joel Castile</option>
+                                            <option value="Kyle Sanders" >Kyle Sanders</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">Lead Provider ID</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[1][]" data-attrid="1" multiple data-placeholder="-">
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">productid</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[4][]" data-attrid="4" multiple data-placeholder="-">
+                                            <option value="10" >10</option>
+                                            <option value="5" >5</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">SetOfficerID</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[9][]" data-attrid="9" multiple data-placeholder="-">
+                                            <option value="1091" >1091</option>
+                                            <option value="826" >826</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">StatusID</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[8][]" data-attrid="8" multiple data-placeholder="-">
+                                            <option value="2" >2</option>
+                                            <option value="581" >581</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">teamid</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[5][]" data-attrid="5" multiple data-placeholder="-">
+                                            <option value="10" >10</option>
+                                            <option value="48" >48</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">Test</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[11][]" data-attrid="11" multiple data-placeholder="-">
+                                            <option value="Test1" >Test1</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">Test2</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[13][]" data-attrid="13" multiple data-placeholder="-">
+                                            <option value="Test123" >Test123</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">UDF9</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[2][]" data-attrid="2" multiple data-placeholder="-">
+                                            <option value="9" >9</option>
+                                            <option value="affiliates" >affiliates</option>
+                                            <option value="Call" >Call</option>
+                                            <option value="Consumer Affairs &lt;10k" >Consumer Affairs &lt;10k</option>
+                                            <option value="ConsumerAffairs Call &gt;10k" >ConsumerAffairs Call &gt;10k</option>
+                                            <option value="Digital" >Digital</option>
+                                            <option value="Direct" >Direct</option>
+                                            <option value="display" >display</option>
+                                            <option value="fbd" >fbd</option>
+                                            <option value="Live Chat" >Live Chat</option>
+                                            <option value="Mail" >Mail</option>
+                                            <option value="Podcast" >Podcast</option>
+                                            <option value="Post Test9" >Post Test9</option>
+                                            <option value="Radio" >Radio</option>
+                                            <option value="referral" >referral</option>
+                                            <option value="Remarketing" >Remarketing</option>
+                                            <option value="SugarTest" >SugarTest</option>
+                                            <option value="Test2" >Test2</option>
+                                            <option value="TV" >TV</option>
+                                            <option value="UDF9" >UDF9</option>
+                                            <option value="Uni Chi Local" >Uni Chi Local</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">UDF34</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[6][]" data-attrid="6" multiple data-placeholder="-">
+                                            <option value="34" >34</option>
+                                            <option value="CNN" >CNN</option>
+                                            <option value="De Pelicula Classico" >De Pelicula Classico</option>
+                                            <option value="De Pelicula Usa" >De Pelicula Usa</option>
+                                            <option value="ESPND" >ESPND</option>
+                                            <option value="Foro" >Foro</option>
+                                            <option value="Fusion" >Fusion</option>
+                                            <option value="Galavision" >Galavision</option>
+                                            <option value="HLN" >HLN</option>
+                                            <option value="NREM-L" >NREM-L</option>
+                                            <option value="Ritmoson" >Ritmoson</option>
+                                            <option value="SugarTest" >SugarTest</option>
+                                            <option value="Telehit" >Telehit</option>
+                                            <option value="Tl Novelas" >Tl Novelas</option>
+                                            <option value="TM" >TM</option>
+                                            <option value="Unimas" >Unimas</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">UDF133</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[3][]" data-attrid="3" multiple data-placeholder="-">
+                                            <option value="133" >133</option>
+                                            <option value="airtime-media" >airtime-media</option>
+                                            <option value="BBB" >BBB</option>
+                                            <option value="bdc" >bdc</option>
+                                            <option value="Best Debt Company" >Best Debt Company</option>
+                                            <option value="C3" >C3</option>
+                                            <option value="c3-data" >c3-data</option>
+                                            <option value="Call" >Call</option>
+                                            <option value="call-trader" >call-trader</option>
+                                            <option value="compra" >compra</option>
+                                            <option value="Consumer Affairs &lt;10k" >Consumer Affairs &lt;10k</option>
+                                            <option value="consumer-affairs" >consumer-affairs</option>
+                                            <option value="ConsumerAffairs Call &gt;10k" >ConsumerAffairs Call &gt;10k</option>
+                                            <option value="Converse" >Converse</option>
+                                            <option value="Direct" >Direct</option>
+                                            <option value="e-local" >e-local</option>
+                                            <option value="employee-perks" >employee-perks</option>
+                                            <option value="facebookad" >facebookad</option>
+                                            <option value="fbd" >fbd</option>
+                                            <option value="Hybrid Radio" >Hybrid Radio</option>
+                                            <option value="Max Radio" >Max Radio</option>
+                                            <option value="Max TV" >Max TV</option>
+                                            <option value="modern" >modern</option>
+                                            <option value="palo-media" >palo-media</option>
+                                            <option value="Phil" >Phil</option>
+                                            <option value="Post Test133" >Post Test133</option>
+                                            <option value="Pro Media" >Pro Media</option>
+                                            <option value="pro-media" >pro-media</option>
+                                            <option value="Revolution Media" >Revolution Media</option>
+                                            <option value="snap" >snap</option>
+                                            <option value="squeeze" >squeeze</option>
+                                            <option value="SugarTest" >SugarTest</option>
+                                            <option value="Test" >Test</option>
+                                            <option value="Test3" >Test3</option>
+                                            <option value="TRUIC" >TRUIC</option>
+                                            <option value="UDF133" >UDF133</option>
+                                            <option value="Yelp" >Yelp</option>
+                                            <option value="Z - Converse Spanish" >Z - Converse Spanish</option>
+                                            <option value="Z - Max TV Spanish " >Z - Max TV Spanish </option>
+                                        </select>
+
+                                    </div>
+                                    <div class="filter-input-container">
+                                        <label class="filter-label">UDF134</label>
+                                        <br>
+
+
+
+                                        <select class="chosen chosen215 attribute" name="filter_attribute[7][]" data-attrid="7" multiple data-placeholder="-">
+                                            <option value="134" >134</option>
+                                            <option value="Cash" >Cash</option>
+                                            <option value="CTax Branded" >CTax Branded</option>
+                                            <option value="facebook" >facebook</option>
+                                            <option value="facebookad" >facebookad</option>
+                                            <option value="IRS Pros Branded" >IRS Pros Branded</option>
+                                            <option value="Live Chat" >Live Chat</option>
+                                            <option value="PI" >PI</option>
+                                            <option value="PPC" >PPC</option>
+                                            <option value="Radio Cash Buy" >Radio Cash Buy</option>
+                                            <option value="SugarTest" >SugarTest</option>
+                                            <option value="Tax Prep Broadcast" >Tax Prep Broadcast</option>
+                                            <option value="Tax Prep Mailer" >Tax Prep Mailer</option>
+                                            <option value="Tax Prep Sales" >Tax Prep Sales</option>
+                                            <option value="Website Calls" >Website Calls</option>
+                                            <option value="website mail" >website mail</option>
+                                            <option value="website-retargeting" >website-retargeting</option>
+                                        </select>
+
+                                    </div>
+
+                                    <input type="hidden" name="page" id="filter_form_page" value="1">
+                                    <input type="hidden" name="order_by" value="">
+                                    <input type="hidden" name="userid" value="">
+                                    <input type="hidden" name="export" id="export_to" value="">
+                                    <input type="hidden" name="request" id="request" value="ajax">
+
+                                </form>
+                            </div>
+
+                            <div id="columns-body" class="tabs">
+                                <form action="" method="POST" id="column_settings_form">
+                                    <h4 style="margin-bottom: 10px;">Show:</h4>
+
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-1" type="checkbox" class="iCheck column-checkbox" name="column[col-1]" data-column="col-1" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-1" style="font-size: 13px">Call date</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-2" type="checkbox" class="iCheck column-checkbox" name="column[col-2]" data-column="col-2" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-2" style="font-size: 13px">Call origin</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-3" type="checkbox" class="iCheck column-checkbox" name="column[col-3]" data-column="col-3" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-3" style="font-size: 13px">Call type</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-4" type="checkbox" class="iCheck column-checkbox" name="column[col-4]" data-column="col-4" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-4" style="font-size: 13px">Phone</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-5" type="checkbox" class="iCheck column-checkbox" name="column[col-5]" data-column="col-5" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-5" style="font-size: 13px">Caller ID</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-6" type="checkbox" class="iCheck column-checkbox" name="column[col-6]" data-column="col-6" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-6" style="font-size: 13px">DNIS</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-7" type="checkbox" class="iCheck column-checkbox" name="column[col-7]" data-column="col-7" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-7" style="font-size: 13px">Call status</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-8" type="checkbox" class="iCheck column-checkbox" name="column[col-8]" data-column="col-8" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-8" style="font-size: 13px">Call duration</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-9" type="checkbox" class="iCheck column-checkbox" name="column[col-9]" data-column="col-9" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-9" style="font-size: 13px">Listen </div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-10" type="checkbox" class="iCheck column-checkbox" name="column[col-10]" data-column="col-10" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-10" style="font-size: 13px">Download </div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-11" type="checkbox" class="iCheck column-checkbox" name="column[col-11]" data-column="col-11" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-11" style="font-size: 13px">Voicemail </div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-12" type="checkbox" class="iCheck column-checkbox" name="column[col-12]" data-column="col-12" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-12" style="font-size: 13px">Agent</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-13" type="checkbox" class="iCheck column-checkbox" name="column[col-13]" data-column="col-13" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-13" style="font-size: 13px">Campaign</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-14" type="checkbox" class="iCheck column-checkbox" name="column[col-14]" data-column="col-14" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-14" style="font-size: 13px">Account ID</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-15" type="checkbox" class="iCheck column-checkbox" name="column[col-15]" data-column="col-15" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-15" style="font-size: 13px">Contact list</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-16" type="checkbox" class="iCheck column-checkbox" name="column[col-16]" data-column="col-16" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-16" style="font-size: 13px">Call result</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-17" type="checkbox" class="iCheck column-checkbox" name="column[col-17]" data-column="col-17" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-17" style="font-size: 13px">Final </div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-18" type="checkbox" class="iCheck column-checkbox" name="column[col-18]" data-column="col-18" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-18" style="font-size: 13px">Termination event</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-19" type="checkbox" class="iCheck column-checkbox" name="column[col-19]" data-column="col-19" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-19" style="font-size: 13px">Missed</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-20" type="checkbox" class="iCheck column-checkbox" name="column[col-20]" data-column="col-20" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-20" style="font-size: 13px">Talk time</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-21" type="checkbox" class="iCheck column-checkbox" name="column[col-21]" data-column="col-21" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-21" style="font-size: 13px">Wrap time</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-22" type="checkbox" class="iCheck column-checkbox" name="column[col-22]" data-column="col-22" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-22" style="font-size: 13px">Wait time</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-23" type="checkbox" class="iCheck column-checkbox" name="column[col-23]" data-column="col-23" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-23" style="font-size: 13px">Revenue</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-24" type="checkbox" class="iCheck column-checkbox" name="column[col-24]" data-column="col-24" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-24" style="font-size: 13px">Resulted in</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-1" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-1]" data-column="col-attr-1" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-1" style="font-size: 13px">ExtName</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-2" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-2]" data-column="col-attr-2" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-2" style="font-size: 13px">Lead Provider ID</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-3" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-3]" data-column="col-attr-3" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-3" style="font-size: 13px">SetOfficerID</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-4" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-4]" data-column="col-attr-4" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-4" style="font-size: 13px">StatusID</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-5" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-5]" data-column="col-attr-5" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-5" style="font-size: 13px">Test</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-6" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-6]" data-column="col-attr-6" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-6" style="font-size: 13px">Test2</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-7" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-7]" data-column="col-attr-7" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-7" style="font-size: 13px">UDF133</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-8" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-8]" data-column="col-attr-8" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-8" style="font-size: 13px">UDF134</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-9" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-9]" data-column="col-attr-9" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-9" style="font-size: 13px">UDF34</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-10" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-10]" data-column="col-attr-10" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-10" style="font-size: 13px">UDF9</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-11" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-11]" data-column="col-attr-11" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-11" style="font-size: 13px">productid</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 30px;">
+                                        <div style="float:left;">
+                                            <input id="column_col-attr-12" type="checkbox" class="iCheck column-checkbox" name="column[col-attr-12]" data-column="col-attr-12" value="1" checked="checked" />
+                                            <div class="label_check" for="column_col-attr-12" style="font-size: 13px">teamid</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="export-body" class="tabs">
+                                <div style="margin-left: 35px">
+                                    <div class="button white export_to" onclick="return exxport('csv')"><img style="vertical-align: text-top;" src="images/excel.png"> Export to CSV</div>
+                                    <div class="button white export_to" onclick="return exxport('pdf')"><img style="vertical-align: text-top;" src="images/pdf.png"> Export to PDF</div>
+                                </div>
+                            </div>
+
+                            <div id="save-body" class="tabs">
+                                <div style="margin-left: 0px;">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="header-div">
+
+                    <h1 id="report-header">Reports / Calls <span class="clone_title"></span>
+                        <div class="help"></div>
+                    </h1>
+
+                    <div class="page_help">
+                        <span style="display: block; margin-top: 3px;">Here you can see all calls happened in the system:</span>
+                        <br>
+                        <table id="help_table">
+                            <tr>
+                                <td>Call date </td>
+                                <td> &ndash; when the call was placed.</td>
+                            </tr>
+                            <tr>
+                                <td>Contact list </td>
+                                <td> &ndash; contact list name, if this phone# exists in one of the contact lists.</td>
+                            </tr>
+                            <tr>
+                                <td>Call type </td>
+                                <td> &ndash; type of the call (Manual, Inbound, etc).</td>
+                            </tr>
+                            <tr>
+                                <td>Phone </td>
+                                <td> &ndash; the lead phone number.</td>
+                            </tr>
+                            <tr>
+                                <td>Caller ID </td>
+                                <td> &ndash; CallerID for inbound calls.</td>
+                            </tr>
+                            <tr>
+                                <td>DNIS </td>
+                                <td> &ndash; DNIS for inbound calls.</td>
+                            </tr>
+                            <tr>
+                                <td>Call status </td>
+                                <td> &ndash; technical status of the call (dropped? answered? answering machine?).</td>
+                            </tr>
+                            <tr>
+                                <td>Call duration </td>
+                                <td> &ndash; the total duration of the call (including dialing, wait, and on hold times).</td>
+                            </tr>
+                            <tr>
+                                <td>Agent </td>
+                                <td> &ndash; agent name, who spoke to the customer.</td>
+                            </tr>
+                            <tr>
+                                <td>Campaign </td>
+                                <td> &ndash; campaign name, if the call was placed or received within a campaign.</td>
+                            </tr>
+                            <tr>
+                                <td>Account ID </td>
+                                <td> &ndash; Account ID associated with the call.</td>
+                            </tr>
+                            <tr>
+                                <td>Result code </td>
+                                <td> &ndash; call result.</td>
+                            </tr>
+                            <tr>
+                                <td>Final </td>
+                                <td> &ndash; an indicator that shows whether the call result is final.</td>
+                            </tr>
+                            <tr>
+                                <td>Termination event</td>
+                                <td> &ndash; termination event the call ended with.</td>
+                            </tr>
+                            <tr>
+                                <td>Talk time </td>
+                                <td> &ndash; talk time (call duration, excluding dialing, wait, and on hold times).</td>
+                            </tr>
+                            <tr>
+                                <td>Wrap time </td>
+                                <td> &ndash; time spent by an agent wrapping the call after the call is finished.</td>
+                            </tr>
+                            <tr>
+                                <td>Wait time </td>
+                                <td> &ndash; time agent spent waiting for this call (in "Ready" status).</td>
+                            </tr>
+                            <tr>
+                                <td>Listen </td>
+                                <td> &ndash; call recording (special permission required)</td>
+                            </tr>
+                            <tr>
+                                <td>Download </td>
+                                <td> &ndash; call recording download button (special permission required)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <table id="calls" class="zebra hover datatable-tablebox-class" style="position: relative" width="auto" cellpadding="5" cellspacing="1" border="0">
+                        <thead>
+                            <tr>
+                                <th>Call date</th>
+                                <th>Call origin</th>
+                                <th>Call type</th>
+                                <th>Phone</th>
+                                <th>Caller ID</th>
+                                <th>DNIS</th>
+                                <th>Call status</th>
+                                <th>Call duration</th>
+                                <th data-orderable="false">Listen </th>
+                                <th data-orderable="false">Download</th>
+                                <th data-orderable="false">Voicemail </th>
+                                <th>Agent</th>
+                                <th>Campaign</th>
+                                <th>Account ID</th>
+                                <th>Contact list</th>
+                                <th>Call result</th>
+                                <th>Final</th>
+                                <th>Termination event</th>
+                                <th>Missed</th>
+                                <th>Talk time</th>
+                                <th>Wrap time</th>
+                                <th>Wait time</th>
+                                <th>Revenue</th>
+                                <th data-orderable="false">Resulted in</th>
+                                <th data-orderable="false">ExtName</th>
+                                <th data-orderable="false">Lead Provider ID</th>
+                                <th data-orderable="false">SetOfficerID</th>
+                                <th data-orderable="false">StatusID</th>
+                                <th data-orderable="false">Test</th>
+                                <th data-orderable="false">Test2</th>
+                                <th data-orderable="false">UDF133</th>
+                                <th data-orderable="false">UDF134</th>
+                                <th data-orderable="false">UDF34</th>
+                                <th data-orderable="false">UDF9</th>
+                                <th data-orderable="false">productid</th>
+                                <th data-orderable="false">teamid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <script src="/js/main.js"></script>
+            <script src="/js/left_filter_panel.js"></script>
+            <script src="/js/datatables/datatables.fixedHeader.customfix.js"></script>
+        </div>
+    </div>
+</body>
+</html>

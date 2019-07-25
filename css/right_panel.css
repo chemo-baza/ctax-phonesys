@@ -1,0 +1,277 @@
+#bookmark-menu {
+    position: absolute;
+    right: 90px;
+    top: 35px;
+    width: 0px;
+    padding-left: 0;
+    z-index: 999;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#bookmark-menu li {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+    background: #444;
+    padding: 5px;
+    width: 20px;
+    right: -60px;
+    height: 90px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+#bookmark-menu li a {
+    display: block;
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    white-space: nowrap;
+    position: relative;
+    height: 10px;
+    width: 40px;
+    top: 48px;
+    right: 13px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+#bookmark-menu li.active {
+    background: #333;
+}
+
+#bookmark-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 111;
+    background: #333;
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    overflow: auto;
+}
+
+#bookmark-container .bookmark-body {
+    padding: 10px 20px;
+    width: 210px;
+}
+
+body.bookmark-opened #bookmark-menu {
+    right: 340px;
+}
+
+body.bookmark-opened #bookmark-container {
+    width: 250px;
+}
+
+body.bookmark-opened>.container>.content {
+    padding-right: 265px;
+}
+
+.agent_list_box {
+    border-bottom: 1px dashed #676666;
+    color: #fff;
+    width: 210px;
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.agent_list_box span.name {
+    display: block;
+    /*float: left;*/
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.agent_list_box span.status {
+    display: block;
+    float: left;
+    width: 18px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+span.status.ONHOLD {
+    background: url(../images/agent_status/onhold.png) no-repeat 0 7px;
+}
+
+span.status.LUNCH {
+    background: url(../images/agent_status/lunch.png) no-repeat 0 7px;
+}
+
+span.status.TALKING {
+    background: url(../images/agent_status/talking.png) no-repeat 0 6px;
+}
+
+span.status.READY {
+    background: url(../images/agent_status/talking.png) no-repeat 0 6px;
+}
+
+span.status.NOTREADY {
+    background: url(../images/agent_status/notready.png) no-repeat 0 7px;
+}
+
+span.status.WRAP {
+    background: url(../images/agent_status/wrap.png) no-repeat 0 7px;
+}
+
+span.status.BREAK {
+    background: url(../images/agent_status/break.png) no-repeat 0 7px;
+}
+
+span.status.OTHER {
+    background: url(../images/agent_status/other.png) no-repeat 0 7px;
+}
+
+span.status.BATHROOM {
+    background: url(../images/agent_status/bathroom_on_black.png) no-repeat 0 7px;
+}
+
+span.status.MEETING {
+    background: url(../images/agent_status/meeting_on_black.png) no-repeat 0 7px;
+}
+
+span.status.PREVIEW {
+    background: url(../images/agent_status/preview.png) no-repeat 0 7px;
+}
+
+span.status.TRAINING {
+    background: url(../images/agent_status/training.png) no-repeat 0 7px;
+}
+
+.tb_agents_list {
+    font-size: 14px;
+}
+
+.tb_agents_list tr td {
+    padding: 2px 5px;
+}
+
+.qtip {
+    width: 290px !important;
+}
+
+.voicemail_list,
+.missed_calls_list {
+    font-size: 11px;
+}
+
+.voicemail_list td,
+.missed_calls_list td {
+    border-bottom: 1px solid #555;
+    padding: 4px 0 3px 0;
+}
+
+.voicemail_list div.button-player {
+    margin: 0;
+}
+
+.voicemail_list div.button-player .play {
+    width: 20px;
+    height: 20px;
+}
+
+.mp3 {
+    font-size: 0;
+    color: transparent;
+}
+
+a.delete,
+a.delete_vm,
+a.trash {
+    background: url(../images/icons/icon_delete_24x24.png) center center no-repeat transparent;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: -2px;
+}
+
+/*div.button-player .time {
+	display: none !important;
+}*/
+
+div.button-player .play {
+    top: 1px;
+    position: relative;
+}
+
+#bookmark-menu li.bookmark-mystats,
+#bookmark-menu li.bookmark-myteam {
+    height: 75px;
+}
+
+#bookmark-menu li.bookmark-mystats a,
+#bookmark-menu li.bookmark-myteam a {
+    top: 37px;
+}
+
+#bookmark-menu li.bookmark-voicemail {}
+
+#bookmark-menu li.bookmark-voicemail a {}
+
+#bookmark-menu li.bookmark-help {
+    height: 35px;
+}
+
+#bookmark-menu li.bookmark-help a {
+    top: 13px;
+}
+
+#bookmark-voicemail h3,
+#bookmark-missedcalls h3 {
+    position: relative;
+}
+
+#bookmark-voicemail .voicemail_sort,
+#bookmark-missedcalls .missedcalls_sort {
+    display: block;
+    width: 21px;
+    height: 4px;
+    position: absolute;
+    left: 90px;
+    top: 8px;
+}
+
+#bookmark-voicemail .voicemail_sort.desc,
+#bookmark-missedcalls .missedcalls_sort.desc {
+    background: url(../images/tablesorter.down.gif);
+}
+
+#bookmark-voicemail .voicemail_sort.asc,
+#bookmark-missedcalls .missedcalls_sort.asc {
+    background: url(../images/tablesorter.up.gif);
+}
+
+.missed_calls_list p {
+    margin: 0px;
+}
+
+#bookmark-menu li.bookmark-missedcalls a {
+    top: 55px;
+}
+
+#right_tab_missing_call_pages.paginator span strong {
+    background: none;
+    border: 1px solid #ccc;
+}
+
+#bookmark-voicemail .voicemail_list .button-player .time {
+    display: none;
+}

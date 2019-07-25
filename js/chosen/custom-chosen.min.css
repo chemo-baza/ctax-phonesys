@@ -1,0 +1,129 @@
+.chosen-results li:nth-child(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+.chosen-container-multi .search-choice {
+    width: 100%;
+}
+
+@media all and (-ms-high-contrast:none) {
+    .foo {
+        color: green
+    }
+    /* IE10 */
+    *::-ms-backdrop,
+    .chosen-results {
+        overflow: hidden ! important;
+        overflow-y: hidden ! important;
+    }
+    /* IE11 */
+}
+
+/*Input Styles. Chosen Containers ans Chosen containers multi*/
+
+.chosen-container-single .chosen-single {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #fff;
+    height: 29px;
+    padding: 0 0 0 5px;
+    padding-top: 2px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+}
+
+.chosen-container-single .chosen-single div b {
+    background-position-x: 0px;
+    background-position-y: 4px;
+}
+
+.chosen-container {
+    margin-bottom: 0px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+    background-image: none;
+}
+
+/*Chosen containers multi*/
+
+.chosen-container-multi .chosen-choices {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+}
+
+/*
+.chosen-container-multi::before{
+    position: absolute;
+    content: " \2193";
+    top: 0px;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+}*/
+
+.chosen-choices .search-field div b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("chosen-sprite.png") no-repeat 0 -7px;
+    /*background-position: calc(100% - 10px) calc(100% - 10px);*/
+    /*background-size: 45%;*/
+}
+
+.chosen-choices .search-field div,
+.chosen-container-active.chosen-with-drop .chosen-choices div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 18px;
+    height: 16px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-choices div b {
+    background: url("chosen-sprite.png") no-repeat -18px -7px;
+    /*background-position: calc(100% - 10px) calc(100% - 10px);*/
+}
+
+.chosen-container-multi .chosen-search {
+    position: relative;
+    z-index: 1010;
+    margin: 0;
+    padding: 3px 4px;
+    white-space: nowrap;
+}
+
+.chosen-container-multi .chosen-search input[type="text"] {
+    margin: 1px 0;
+    padding: 4px 20px 4px 5px;
+    width: 100%;
+    height: auto;
+    outline: 0;
+    border: 1px solid #aaa;
+    background: url("chosen-sprite.png") no-repeat 100% -20px;
+    font-size: 1em;
+    font-family: sans-serif;
+    line-height: normal;
+    border-radius: 0;
+}
+
+ul.chosen-results {
+    overflow-y: auto;
+}
+
+/*Resolves the issue with scrollbar in IE*/
+
+.chosen-container .chosen-drop {
+    clip: none;
+    display: none;
+}
+
+.chosen-with-drop.chosen-container .chosen-drop {
+    display: block;
+}

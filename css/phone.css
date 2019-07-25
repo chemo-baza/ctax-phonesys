@@ -1,0 +1,795 @@
+#phone {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+#phone .connected {
+    display: none;
+    margin-left: -10px;
+    width: 115px;
+    background-color: #0D9100;
+    color: #FFF;
+    font-size: 11px;
+    padding: 3px 0 4px 10px;
+    border-left: none;
+}
+
+#phone .disconnected {
+    display: none;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: #b30002;
+    color: #FFF;
+    font-size: 13px;
+    padding: 10px 10px 13px 10px;
+    text-align: center;
+    box-shadow: 0px 0px 8px #000000 inset;
+}
+
+#phone .disconnected .button {
+    margin-top: 7px;
+    height: 28px;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#phone .calls {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+#phone .calls_holding {
+    display: none;
+    background-color: #4F4F4F;
+    border-radius: 10px 0 0 10px;
+    margin: 15px -10px -10px 5px;
+    color: #FFF;
+    padding: 4px 12px 4px 0;
+    text-align: right;
+}
+
+#phone .calls_holding span {
+    font-weight: bold;
+}
+
+#phone .line {
+    background-color: #777;
+    background-image: url(../images/icons/time_24x24.png);
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    color: #FFF;
+    padding: 0 8px 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: -3px 3px 5px #181818;
+    text-align: right;
+}
+
+#phone .line.current {
+    background-color: #FAFAFA;
+    background-image: url(../images/icons/equalizer_24x24.gif);
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+    color: #000;
+}
+
+#phone .line.current.dialing {
+    background-image: url(../images/icons/graphic_arrows_21x11.gif);
+    background-position: 195px 16px;
+}
+
+#phone .line.current.dialing .buttons .dtmf,
+#phone .line.current.dialing .buttons .onhold,
+#phone .line.current.dialing .buttons .continue,
+#phone .line.current.dialing .buttons .transfer {
+    display: none;
+}
+
+#phone .line div {}
+
+#phone .line div.number {
+    padding: 10px 0 8px 40px;
+    text-align: left;
+}
+
+#phone .line .status {
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+#phone .line .time {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#phone .line .buttons {
+    text-align: center;
+}
+
+#phone .line .buttons div {
+    display: inline-block;
+    border: 1px solid #777;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: normal;
+    box-shadow: 1px 1px 2px #333;
+}
+
+#phone .line.current .buttons div {
+    border: 1px solid #FFF;
+    box-shadow: 1px 1px 2px #888;
+}
+
+#phone .line .buttons div:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone .line .buttons div:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone>div.monitor {
+    background-color: #FAFAFA;
+    background-image: url(../images/agent_monitoring/ear-listen-icon.png);
+    background-position: 13px 10px;
+    background-repeat: no-repeat;
+    color: #000;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    padding: 0 8px 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#phone>div.monitor .title {
+    text-align: left;
+    padding-left: 47px;
+    padding-top: 11px;
+}
+
+#phone>div.monitor .status {
+    text-align: left;
+    padding-bottom: 8px;
+    font-size: 15px;
+}
+
+#phone>div.monitor .time {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 11px;
+    font-weight: normal;
+    padding-bottom: 8px;
+}
+
+#phone>div.monitor .name {
+    text-align: left;
+    padding-left: 68px;
+    font-size: 14px;
+    padding-top: 5px;
+    font-weight: normal;
+    padding-bottom: 8px;
+    background-image: url(../images/icons/icon_headset_16x16.png);
+    background-repeat: no-repeat;
+    background-position: 45px 8px;
+    word-break: break-all;
+    width: 180px;
+    display: inline-block;
+}
+
+#phone>div.monitor .button {
+    display: inline-block;
+    border: 1px solid #FFF;
+    box-shadow: 1px 1px 2px #888;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    background-color: #F00;
+}
+
+#phone>div.monitor .button:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone>div.monitor .button:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone>div.preview {
+    background-color: #FAFAFA;
+    background-image: url(../images/phone/preview.gif);
+    background-position: 1px 10px;
+    background-repeat: no-repeat;
+    color: #000;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    padding: 0 8px 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#phone>div.preview .title {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 47px;
+    padding-top: 11px;
+}
+
+#phone>div.preview .number {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+#phone>div.preview .buttons {
+    text-align: center;
+}
+
+#phone>div.preview .buttons div {
+    display: inline-block;
+    border: 1px solid #FFF;
+    box-shadow: 1px 1px 2px #888;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#phone>div.preview .buttons div:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone>div.preview .buttons div:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone>div.preview .buttons div.call {
+    color: #FFF;
+    background: #00C02E url(../images/phone/white_phone.png) 5px center no-repeat;
+    border: 1px solid #00C02E;
+    padding-left: 34px;
+    font-weight: bold;
+}
+
+#phone>div.preview .buttons div.call.blink {
+    background-color: #008E05;
+    border-color: #008E05;
+}
+
+#phone>div.preview .buttons div.postpone {
+    color: #000;
+    background: url(../images/phone/icon-time.png) 5px center no-repeat;
+    border: 1px solid #999;
+    padding-left: 22px;
+    margin-left: 6px;
+}
+
+#phone>div.accept-decline {
+    background-color: #FAFAFA;
+    background-image: url(../images/phone/preview.gif);
+    background-position: 1px 10px;
+    background-repeat: no-repeat;
+    color: #000;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    padding: 0 8px 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#phone>div.accept-decline .title {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 47px;
+    padding-top: 11px;
+}
+
+#phone>div.accept-decline .number {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+#phone>div.accept-decline .buttons {
+    text-align: center;
+}
+
+#phone>div.accept-decline .buttons div {
+    display: inline-block;
+    border: 1px solid #FFF;
+    box-shadow: 1px 1px 2px #888;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#phone>div.accept-decline .buttons div:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone>div.accept-decline .buttons div:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone>div.accept-decline .buttons div.accept {
+    color: #FFF;
+    background: #00C02E url(../images/phone/white_phone.png) 5px center no-repeat;
+    border: 1px solid #00C02E;
+    padding-left: 34px;
+    font-weight: bold;
+}
+
+#phone>div.accept-decline .buttons div.accept.blink {
+    background-color: #008E05;
+    border-color: #008E05;
+}
+
+#phone>div.accept-decline .buttons div.decline {
+    color: #000;
+    border: 1px solid #999;
+    margin-left: 6px;
+}
+
+#phone>div.hangup-accept-decline {
+    background-color: #FAFAFA;
+    background-image: url(../images/phone/preview.gif);
+    background-position: 1px 10px;
+    background-repeat: no-repeat;
+    color: #000;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    padding: 0 8px 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#phone>div.hangup-accept-decline .title {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 47px;
+    padding-top: 11px;
+}
+
+#phone>div.hangup-accept-decline .number {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+#phone>div.hangup-accept-decline .buttons {
+    text-align: center;
+}
+
+#phone>div.hangup-accept-decline .buttons div {
+    display: inline-block;
+    border: 1px solid #FFF;
+    box-shadow: 1px 1px 2px #888;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#phone>div.hangup-accept-decline .buttons div:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone>div.hangup-accept-decline .buttons div:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone>div.hangup-accept-decline .buttons div.accept {
+    color: #FFF;
+    background: #00C02E url(../images/phone/white_phone.png) 5px center no-repeat;
+    border: 1px solid #00C02E;
+    padding-left: 34px;
+    font-weight: bold;
+}
+
+#phone>div.hangup-accept-decline .buttons div.accept.blink {
+    background-color: #008E05;
+    border-color: #008E05;
+}
+
+#phone>div.hangup-accept-decline .buttons div.decline {
+    color: #000;
+    border: 1px solid #999;
+    margin-left: 6px;
+}
+
+#phone .manual_call {
+    display: none;
+    background-color: #777;
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    margin-top: 15px;
+    color: #FFF;
+    padding: 0 8px 12px 0;
+    box-shadow: -3px 3px 5px #181818;
+    text-align: right;
+}
+
+#phone .manual_call .h {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 0 5px 12px;
+    text-align: left;
+}
+
+#phone .manual_call .button {
+    display: inline-block;
+    text-align: right;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: normal;
+    box-shadow: 1px 1px 2px #333;
+    background: #00C02E url(../images/phone/white_phone.png) 5px center no-repeat;
+    border: 1px solid #00C02E;
+    vertical-align: -7px;
+    width: 35px;
+}
+
+#phone .manual_call .button:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone .manual_call .button:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.44) inset !important;
+    border: 1px solid #3D3D3D !important;
+}
+
+#phone .manual_call input.masked_phone {
+    width: 150px
+}
+
+#phone .line.offline {
+    background: none;
+    border: 1px solid #CCC;
+    border-right: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#phone .line.offline div.number {
+    display: none;
+}
+
+#phone .line.offline .buttons {
+    display: none;
+}
+
+#phone .line.offline .dtmf_keypad {
+    display: none;
+}
+
+#phone .line.offline .transfer_to {
+    display: none;
+}
+
+#phone .line.offline .manual_call {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#phone .line .buttons div.continue {
+    display: inline-block;
+}
+
+#phone .line.current .buttons div.continue {
+    display: none;
+}
+
+#phone .line .buttons div.onhold {
+    display: none;
+}
+
+#phone .line.current .buttons div.onhold {
+    display: inline-block;
+}
+
+#phone .line .buttons div.transfer {
+    display: none;
+}
+
+#phone .line.current .buttons div.transfer {
+    display: inline-block;
+}
+
+#phone .line .buttons div.dtmf {
+    display: none;
+}
+
+#phone .line.current .buttons div.dtmf {
+    display: inline-block;
+}
+
+#phone .line div.transfer_to {
+    display: none;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+#phone .line div.dtmf_keypad {
+    display: none;
+    width: 167px;
+    margin: 10px auto 5px auto;
+}
+
+#phone .line div.dtmf_keypad div {
+    display: inline-block;
+    width: 40px;
+    border: 1px solid #CCC;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    height: 40px;
+    box-shadow: 2px 2px 6px #D3D3D3;
+    cursor: pointer;
+}
+
+#phone .line div.dtmf_keypad div span {
+    display: block;
+    font-size: 10px;
+}
+
+#phone .line div.dtmf_keypad div:hover {
+    background-color: #66BCFF;
+    color: #FFF;
+    border: 1px solid #66BCFF;
+}
+
+#phone .line div.dtmf_keypad div:active {
+    background-color: #66BCFF;
+    color: #FFF;
+    border: 1px solid #555;
+    box-shadow: 0px 0px 6px #292929 inset;
+}
+
+#phone .line .buttons div.hold-queue {
+    background: #FFF url(../images/phone/hold-queue.png) center center no-repeat;
+    border: 1px solid #B5B5B5;
+    width: 18px;
+    display: none;
+}
+
+#phone .line .buttons div.dtmf {
+    background: #FFF url(../images/phone/dtmf.png) center center no-repeat;
+    border: 1px solid #B5B5B5;
+    width: 16px;
+}
+
+#phone .line .buttons div.transfer {
+    background: #999 url(../images/icons/mail_redirect_16x16.png) center center no-repeat;
+    border: 1px solid #888;
+    width: 16px;
+}
+
+#phone .line.current .buttons div.transfer {
+    background-color: #FFF;
+    border: 1px solid #B5B5B5;
+}
+
+#phone .line .buttons div.onhold {
+    background: #EEE url(../images/phone/onhold.png) 5px center no-repeat;
+    border: 1px solid #CCC;
+    width: 16px;
+}
+
+#phone .line .buttons div.continue {
+    background: #999 url(../images/icons/play_16x16.png) 5px center no-repeat;
+    border: 1px solid #888;
+    width: 62px;
+}
+
+#phone .line .buttons div.hangup {
+    background: #999 url(../images/phone/white_phone.png) 5px center no-repeat;
+    border: 1px solid #888;
+    width: 24px;
+}
+
+#phone .line.current .buttons div.hangup {
+    color: #FFF;
+    border: 1px solid #ef3131;
+    background-color: #ef3131;
+}
+
+#phone .line .buttons div.hangup:hover {
+    color: #FFF;
+    border: 1px solid #ef3131;
+    background-color: #ef3131;
+}
+
+#phone .between {
+    display: none;
+    margin-top: 1px;
+    text-align: center;
+    background-image: url(../images/phone/between_bg.png);
+    background-repeat: no-repeat;
+    background-position: 18px top;
+    height: 54px;
+    margin-bottom: -8px;
+    padding-left: 15px;
+}
+
+#phone .between>div {
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    color: #000;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 3px 8px 3px 25px;
+    background-position: 5px 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin: 16px 1px 0;
+}
+
+#phone .between>div.bridge {
+    background-image: url(../images/phone/bridge.png);
+    padding-left: 23px;
+}
+
+#phone .between>div.conference {
+    background-image: url(../images/phone/icon_merge.png);
+}
+
+#phone .in_conference {
+    display: none;
+    margin-top: 1px;
+    text-align: center;
+    background-image: url(../images/phone/between_bg.png);
+    background-repeat: no-repeat;
+    background-position: 18px top;
+    height: 40px;
+    margin-bottom: -8px;
+    padding-left: 15px;
+    font-size: 14px;
+    padding-top: 17px;
+    color: #FFFF98;
+}
+
+#phone .in_conference div.bridge {
+    background-image: url(../images/phone/bridge.png);
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    color: #000;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 3px 8px 3px 25px;
+    background-position: 5px 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin: 0 0 0 6px;
+}
+
+#phone .in_conference div.bridge:hover {
+    background-color: #EEE;
+}
+
+#phone .internal_transfer {
+    display: none;
+    background-color: #777;
+    border-radius: 10px 0 0 10px;
+    margin: 15px -10px 0 5px;
+    padding: 0 15px 12px 0;
+    color: #FFF;
+    box-shadow: -3px 3px 5px #181818;
+    text-align: center;
+}
+
+#phone .internal_transfer .h {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 0 5px 12px;
+    text-align: center;
+}
+
+#phone .internal_transfer .buttons {
+    margin-top: 9px;
+    font-weight: bold;
+    padding: 3px 10px;
+    text-align: left;
+    display: inline-block;
+    background-color: #CCC;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px #333;
+    cursor: pointer;
+}
+
+#phone .internal_transfer .buttons:hover {
+    box-shadow: 1px 1px 1px #666 inset;
+}
+
+#phone .internal_transfer .buttons.accept {
+    background: #0A0;
+}
+
+#phone .internal_transfer .buttons.decline {
+    background: #EF3131;
+    margin-left: 5px;
+}
+
+#phone .internal_transfer .nobuttons {
+    background: #555;
+    padding: 3px 5px;
+    margin: 9px 0 0 15px;
+}
+
+/* + Chosen plugin */
+
+.chosen-container {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.chosen-container .chosen-drop {
+    width: 250px;
+}
+
+/* - Chosen plugin */
+
+#phone .out_of_teams,
+#phone .no_active_campaigns {
+    background-color: #f00;
+    margin-left: -10px;
+    padding: 5px 10px;
+    font-size: 11px;
+    margin-top: 10px;
+    display: none;
+}
+
+.internal_transfer .agent,
+#phone .line span.number {
+    word-break: break-all;
+    width: 180px;
+    display: inline-block;
+}
