@@ -143,19 +143,6 @@ function a2tip() {
         "agent_status_log"
         ];
         var key = 0;
-        $.ajax({
-            'async': false,
-            'type': "POST",
-            'global': false,
-            'dataType': 'html',
-            'url': "ajax/",
-            'data': {
-                act: "get_date_format"
-            },
-            'success': function(data) {
-                get_date_format = data;
-            }
-        });
 
         $(function() {
             /* require(['es6-promise'],function(es6)
@@ -398,23 +385,6 @@ function a2tip() {
 }
 
 
-
-function kick_an_agent(agent_id) {
-    $.ajax({
-        url: "ajax/",
-        type: "POST",
-        dataType: "JSON",
-        data: {
-            act: "kick_an_agent",
-            agent_id: agent_id
-        }
-    })
-    .done(function(r) {
-        alert("Agent kicked out!");
-    });
-
-}
-
 function yyyymmddhhiss() {
     var tz_offset = 300;
     var d = new Date();
@@ -453,38 +423,6 @@ $.extend({
 });
 
 
-
-        // ==== Feature Flags ===========================================================================
-
-        /**
-         * Just write in a twig template:
-         *     if (FF('key_name') {
-         *         ...
-         *     }
-         *
-         * @return {boolean}
-         */
-         function FF(key) {
-            if (!key) return false;
-
-            var feature_result = false;
-
-            // Set the current result object and save it in localstorage
-            $.ajax({
-                url: 'ajax/',
-                method: 'post',
-                dateType: 'json',
-                async: false,
-                data: {
-                    act: 'get_ff_result',
-                    ff_key: key
-                }
-            }).done(function(result) {
-                feature_result = result === 'true';
-            });
-
-            return feature_result;
-        }
 
         /**
          * ==== [ Numeric sort for Datatables ] ==================================================
